@@ -1,0 +1,73 @@
+/* The old way - First Paragraph */
+section.chapter p:nth-of-type(1)::first-letter {
+    color: var(--accent);
+    font-size: 350%;
+    float: left;
+    line-height: .25;
+    margin-right: .5rem;
+    margin-top: .4em;
+  }
+  
+  /* The new way - Second Paragraph
+  section.chapter p:nth-of-type(2)::first-letter {
+    color: var(--accent);
+    -webkit-initial-letter: 2 2;
+    initial-letter: 2 2;
+    margin-right: .5rem;
+  } */
+  
+  
+  
+  
+  /* Page setup, theme, and other styles */
+  
+  :root {
+    --primary: #EFC87E;
+    --accent: #ee9235;
+    /* background: #fefefd; */
+    max-width: 72ch;
+    margin: 36px auto;
+    color: #040d15;
+  }
+  h1 { color: var(--primary); }
+  h1, h2, .author, .source {
+    text-align: center;
+    color: var(--primary);
+  }
+  small {
+    display: block;
+    font-size: .75em;
+    text-wrap: balence;
+    font-weight: normal;
+  }
+  p {
+    columns: 1;
+    hyphens: auto;
+    text-align: justify;
+    line-height: 1.75;
+    color: white;
+  }
+  section:first-of-type { margin-top: 2rem }
+  a:where(:link, :visited) {
+    text-underline-offset: .25ex;
+    color: var(--primary);
+    text-decoration-color: var(--accent);
+  }
+  h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h2 small { 
+    border-bottom: solid 1px var(--accent);
+    padding: 0 2ch .5ex;
+    font-size: 1rem;
+  }
+  h2 span { 
+    border-top: solid 1px var(--accent);
+    margin-top: -1px;
+    padding: .25ex 2ch 0;
+    color: var(--primary);
+  }
+  
